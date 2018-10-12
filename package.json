@@ -15,7 +15,7 @@
     "build:html": "babel-node tools/buildHtml.js",
     "build": "babel-node tools/build.js",
     "test": "mocha --reporter spec tools/testSetup.js \"src/**/*.test.js\"",
-#    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Cognizant",
   "dependencies": {
