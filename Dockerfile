@@ -7,4 +7,4 @@ RUN npm install -g -s --no-progress yarn && \
     yarn run build && \
     yarn cache clean
 CMD [ "npm", "start" ]
-EXPOSE 3000
+EXPOSE 3005
