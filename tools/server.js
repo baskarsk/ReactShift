@@ -19,11 +19,13 @@ app.use(require('webpack-hot-middleware')(compiler));
 app.use('/images', express.static(path.join( __dirname, '../images')));
 
 app.get('*', function(req, res) {
+	console.log('GET METHOD - send response src/index.html ------- '.green);
   res.sendFile(path.join( __dirname, '../src/index.html'));
 });
 
 app.listen(port, function(err) {
   if (err) {
+	  console.log('SERVER.JS error '.green);
     console.log(err);
   } else {
     open(`http://localhost:${port}/`);

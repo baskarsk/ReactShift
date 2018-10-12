@@ -11,6 +11,7 @@ fs.readFile('src/index.html', 'utf8', (err, markup) => {
   $('head').prepend('<link rel="stylesheet" href="/bodha.css">');
   fs.writeFile('dist/index.html', $.html(), 'utf8', function(err) {
     if(err) {
+		 console.log('BUILDHTML.js error!!!!!'.green);
       return console.log(err.red);
     }
     console.log('index.html written to /dist'.green);

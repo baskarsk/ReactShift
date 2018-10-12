@@ -38,11 +38,7 @@ export default {
 	  new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery"
-    }),
-	 new webpack.IgnorePlugin(/ReactContext|react\/addons/),
-	 new webpack.DefinePlugin({
-		 'process.env.FPC_ENV': JSON.stringify('production')
-	}),
+    })
   ],
   module: {
     loaders: [

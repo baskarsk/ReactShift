@@ -14,10 +14,12 @@ app.use('/src/images', express.static(path.join( __dirname, '../src/images')));
 app.use(express.static('dist'));
 
 app.get('*', function(req, res) {
+	console.log('GET METHOD - send response /dist/index.html ------- '.green);
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 app.listen(port, function(err) {
   if (err) {
+	  console.log('---- Error in distServer.js file ----');
     console.log(err);
   } else {
     open(`http://localhost:${port}/`);

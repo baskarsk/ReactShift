@@ -12,7 +12,8 @@ console.log('Generating minified bundle for production via Webpack. This will ta
 
 webpack(webpackConfig).run((error, stats) => {
   if (error) { // so a fatal error occurred. Stop here.
-    //console.log(error.bold.red);
+	console.log('----- Fatal error -BUILD.JS file  ----');
+    console.log(error.bold.red);
     return 1;
   }
 
