@@ -8,14 +8,12 @@
   "main": "index.js",
   "scripts": {
     "clean-dist": "npm run remove-dist && mkdir final",
-    "start": "npm-run-all --parallel open:src test:watch",
+    "start": "npm-run-all --parallel open:src ",
     "open:src": "babel-node tools/server.js",
     "remove-dist": "rimraf ./final",
     "prebuild": "npm-run-all build:html",
     "build:html": "babel-node tools/buildHtml.js",
-    "build": "babel-node tools/build.js",
-    "test": "mocha --reporter spec tools/testSetup.js \"src/**/*.test.js\"",
-    "test:watch": "npm run test -- --watch"
+    "build": "babel-node tools/build.js"
   },
   "author": "Cognizant",
   "dependencies": {
