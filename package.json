@@ -13,7 +13,9 @@
     "remove-dist": "rimraf ./final",
     "prebuild": "npm-run-all build:html",
     "build:html": "babel-node tools/buildHtml.js",
-    "build": "babel-node tools/build.js"
+    "build": "babel-node tools/build.js && npm run copy:index",
+	"copy:index": "cp index.html dist/index.html",
+	"postbuild": "postbuild -i index.html -o dist/index.html -c dist -j dist -r development"
   },
   "author": "Cognizant",
   "dependencies": {
