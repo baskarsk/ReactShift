@@ -14,7 +14,7 @@
     "prebuild": "npm-run-all build:html",
     "build:html": "babel-node tools/buildHtml.js",
     "build": "babel-node tools/build.js && npm run postbuild",
-	"postbuild": "postbuild -i index.html -o dist/index.html -c dist -j dist -r development"
+	"postbuild": "npm start"
   },
   "author": "Cognizant",
   "dependencies": {
