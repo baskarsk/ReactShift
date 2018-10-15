@@ -42,7 +42,7 @@ export default {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
+      {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['resolve-url-loader','babel-loader']},
       {test: /(\.css)$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
       {test: /\.less$/, loader: 'style-loader!css-loader!less-loader'},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
